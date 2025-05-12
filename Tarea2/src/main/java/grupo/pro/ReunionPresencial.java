@@ -12,4 +12,9 @@ public class ReunionPresencial extends Reunion {
     public void finalizar() {
 
     }
+
+    public ReunionPresencial(Date fecha, Instant horaPrevista, Duration duracionPrevista, Instant horaInicio, Instant horaFin, String sala){
+        super(fecha, horaPrevista, duracionPrevista, horaInicio, horaFin);
+        this.sala = sala;
+    }
 }
