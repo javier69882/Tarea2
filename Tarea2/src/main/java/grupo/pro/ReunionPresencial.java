@@ -1,4 +1,7 @@
 package grupo.pro;
+import java.util.Date;
+import java.time.Instant;
+import java.time.Duration;
 
 public class ReunionPresencial extends Reunion {
     private String sala;
