@@ -15,4 +15,7 @@ public class Retraso {
     public void setHora(Instant hora){
         this.hora=hora;
     }
+    public String toString(){
+        return "Retraso: " + hora;
+    }
 }

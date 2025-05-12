@@ -14,4 +14,7 @@ public class Nota{
     public void setContenido(String contenido) {
         this.contenido=contenido;
     }
+    public String toString(){
+        return "Nota: " + contenido;
+    }
 }

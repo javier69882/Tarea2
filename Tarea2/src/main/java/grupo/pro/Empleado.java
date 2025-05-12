@@ -36,4 +36,7 @@ public class Empleado {
     public void setCorreo(String correo){
         this.correo=correo;
     }
+    public String toString(){
+        return "Empleado: " + nombre + " " + apellidos + ", ID: " + id + ", Correo: " + correo;
+    }
 }

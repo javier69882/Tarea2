@@ -55,4 +55,12 @@ public class ReunionVirtual extends Reunion {
     public void setHoraFin(Instant horaFin){
         this.horaFin=horaFin;
     }
+    public String toString(){
+        return "Reunion virtual en enlace: " + enlace + "\n" +
+                "Fecha: " + fecha + "\n" +
+                "Hora prevista: " + horaPrevista + "\n" +
+                "Duracion prevista: " + duracionPrevista + "\n" +
+                "Hora de inicio: " + horaInicio + "\n" +
+                "Hora de fin: " + horaFin;
+    }
 }

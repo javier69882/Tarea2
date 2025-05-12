@@ -15,4 +15,7 @@ public class Departamento {
     public void setNombre(String nombre){
         this.nombre=nombre;
     }
+    public String toString(){
+        return "Departamento: " + nombre;
+    }
 }

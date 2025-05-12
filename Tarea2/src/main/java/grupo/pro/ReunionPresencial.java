@@ -56,4 +56,12 @@ public class ReunionPresencial extends Reunion {
     public void setHoraFin(Instant horaFin){
         this.horaFin=horaFin;
     }
+    public String toString(){
+        return "Reunion presencial en sala: " + sala + "\n" +
+                "Fecha: " + fecha + "\n" +
+                "Hora prevista: " + horaPrevista + "\n" +
+                "Duracion prevista: " + duracionPrevista + "\n" +
+                "Hora inicio: " + horaInicio + "\n" +
+                "Hora fin: " + horaFin;
+    }
 }

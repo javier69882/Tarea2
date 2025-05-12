@@ -18,4 +18,7 @@ public class Invitacion implements Invitable {
     public void setHora(Instant hora){
         this.hora=hora;
     }
+    public String toString(){
+        return "Hora de invitacion: " + hora;
+    }
 }
