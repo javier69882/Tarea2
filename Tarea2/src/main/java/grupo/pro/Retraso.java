@@ -9,4 +9,10 @@ public class Retraso {
     public Retraso(Instant hora) {
         this.hora = hora;
     }
+    public Instant getHora(){
+        return hora;
+    }
+    public void setHora(Instant hora){
+        this.hora=hora;
+    }
 }

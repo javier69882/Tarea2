@@ -20,4 +20,40 @@ public class ReunionPresencial extends Reunion {
         super(fecha, horaPrevista, duracionPrevista, horaInicio, horaFin);
         this.sala = sala;
     }
+    public String getSala(){
+        return sala;
+    }
+    public void setSala(String sala){
+        this.sala=sala;
+    }
+    public java.util.Date getFecha(){
+        return fecha;
+    }
+    public Instant getHoraPrevista(){
+        return horaPrevista;
+    }
+    public Duration getDuracionPrevista(){
+        return duracionPrevista;
+    }
+    public Instant getHoraInicio(){
+        return horaInicio;
+    }
+    public Instant getHoraFin(){
+        return horaFin;
+    }
+    public void setFecha(java.util.Date fecha){
+        this.fecha=fecha;
+    }
+    public void setHoraPrevista(Instant horaPrevista){
+        this.horaPrevista=horaPrevista;
+    }
+    public void setDuracionPrevista(Duration duracionPrevista){
+        this.duracionPrevista=duracionPrevista;
+    }
+    public void setHoraInicio(Instant horaInicio){
+        this.horaInicio=horaInicio;
+    }
+    public void setHoraFin(Instant horaFin){
+        this.horaFin=horaFin;
+    }
 }

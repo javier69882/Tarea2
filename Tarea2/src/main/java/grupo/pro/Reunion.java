@@ -6,11 +6,11 @@ import java.time.Instant;
 import java.util.List;
 
 public abstract class Reunion {
-    private java.util.Date fecha;
-    private Instant horaPrevista;
-    private Duration duracionPrevista;
-    private Instant horaInicio;
-    private Instant horaFin;
+    protected java.util.Date fecha;
+    protected Instant horaPrevista;
+    protected Duration duracionPrevista;
+    protected Instant horaInicio;
+    protected Instant horaFin;
 
     public Reunion(java.util.Date fecha, Instant horaPrevista, Duration duracionPrevista, Instant horaInicio, Instant horaFin) {
         this.fecha = fecha;
@@ -45,5 +45,35 @@ public abstract class Reunion {
 
     public float calcularTiempoReal() {
         return 0;
+    }
+    public java.util.Date getFecha(){
+        return fecha;
+    }
+    public Instant getHoraPrevista(){
+        return horaPrevista;
+    }
+    public Duration getDuracionPrevista(){
+        return duracionPrevista;
+    }
+    public Instant getHoraInicio(){
+        return horaInicio;
+    }
+    public Instant getHoraFin(){
+        return horaFin;
+    }
+    public void setFecha(java.util.Date fecha){
+        this.fecha=fecha;
+    }
+    public void setHoraPrevista(Instant horaPrevista){
+        this.horaPrevista=horaPrevista;
+    }
+    public void setDuracionPrevista(Duration duracionPrevista){
+        this.duracionPrevista=duracionPrevista;
+    }
+    public void setHoraInicio(Instant horaInicio){
+        this.horaInicio=horaInicio;
+    }
+    public void setHoraFin(Instant horaFin){
+        this.horaFin=horaFin;
     }
 }
