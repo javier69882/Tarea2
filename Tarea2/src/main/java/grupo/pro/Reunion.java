@@ -12,6 +12,14 @@ public abstract class Reunion {
     private Instant horaInicio;
     private Instant horaFin;
 
+    public Reunion(java.util.Date fecha, Instant horaPrevista, Duration duracionPrevista, Instant horaInicio, Instant horaFin) {
+        this.fecha = fecha;
+        this.horaPrevista = horaPrevista;
+        this.duracionPrevista = duracionPrevista;
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
+    }
+
     public abstract void iniciar();
     public abstract void finalizar();
 
