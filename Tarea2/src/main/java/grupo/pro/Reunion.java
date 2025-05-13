@@ -13,6 +13,8 @@ public abstract class Reunion {
     protected Instant horaInicio;
     protected Instant horaFin;
     private List<Invitable> invitados=new ArrayList<>();
+    private List<Asistencia> presentes = new ArrayList<>();
+    private List<Invitable> ausentes = new ArrayList<>();
 
     public Reunion(java.util.Date fecha, Instant horaPrevista, Duration duracionPrevista) {
         this.fecha = fecha;
@@ -21,17 +23,28 @@ public abstract class Reunion {
     }
     public void agregarInvitado(Invitable invitable) {
         invitados.add(invitable);
+        ausentes.add(invitable);
     }
 
     public abstract void iniciar();
     public abstract void finalizar();
 
-    public List<Asistencia> obtenerAsistencia() {
-        return null;
+    public void registrarAsistencia(Invitable invitable) {
+        if (ausentes.contains(invitable)) {
+            presentes.add(new Asistencia(invitable, Instant.now()));
+            ausentes.remove(invitable);
+        } else {
+            System.out.println("El invitado ya ha sido registrado o no fue invitado.");
+        }
     }
 
-    public List<Asistencia> obtenerAusencias() {
-        return null;
+
+    public List<Asistencia> obtenerAsistencia() {
+        return presentes;
+    }
+
+    public List<Invitable> obtenerAusencias() {
+        return ausentes;
     }
 
     public List<Retraso> obtenerRetrasos() {

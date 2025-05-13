@@ -30,6 +30,32 @@ public class Main {
         System.out.println(Informatica);
 
 
+        //AGREGA INVITADOS
+        reunionPresencial.agregarInvitado(empleado1);
+        reunionPresencial.agregarInvitado(empleado2);
+
+        // Invitar a todos los invitados
+        for(Invitable invitado : reunionPresencial.getInvitados()){
+            invitado.invitar();
+        }
+
+        reunionPresencial.iniciar();
+        System.out.println("Reunión iniciada a las: " + reunionPresencial.getHoraInicio());
+        reunionPresencial.registrarAsistencia(empleado1);
+
+        reunionPresencial.finalizar();
+        System.out.println("Reunión finalizada a las: " + reunionPresencial.getHoraFin());
+
+        System.out.println("Presentes:");
+        for (Asistencia asistencia : reunionPresencial.obtenerAsistencia()) {
+            System.out.println(asistencia);
+        }
+
+        System.out.println("\nAusentes:");
+        for (Invitable ausente : reunionPresencial.obtenerAusencias()) {
+            System.out.println(ausente);
+        }
+
 
 
     }
