@@ -2,7 +2,7 @@ package grupo.pro;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Departamento {
+public class Departamento implements Invitable{
 
     private String nombre;
     private List<Empleado> empleados; // Empleados del departamento
@@ -17,6 +17,13 @@ public class Departamento {
 
     public int obtenerCantidadEmpleados() {
         return empleados.size();
+    }
+
+    @Override
+    public void invitar(){
+        for(Empleado e : empleados){
+            e.invitar();
+        }
     }
 
 

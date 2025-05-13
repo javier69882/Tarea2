@@ -1,6 +1,6 @@
 package grupo.pro;
 
-public class Empleado {
+public class Empleado implements Invitable{
     private String id;
     private String apellidos;
     private String nombre;
@@ -15,6 +15,11 @@ public class Empleado {
         this.departamento = departamento;
 
         departamento.agregarEmpleado(this); //añado altiro al empleado
+    }
+
+    @Override
+    public void invitar(){
+        System.out.println("Invitación enviada a: " + nombre + " " + apellidos + ", correo: " + correo);
     }
 
 

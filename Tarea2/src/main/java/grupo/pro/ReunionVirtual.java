@@ -8,15 +8,15 @@ public class ReunionVirtual extends Reunion {
 
     @Override
     public void iniciar() {
-
+        this.horaInicio=Instant.now();
     }
 
     @Override
     public void finalizar() {
-
+        this.horaFin=Instant.now();
     }
-    public ReunionVirtual(Date fecha, Instant horaPrevista, Duration duracionPrevista, Instant horaInicio, Instant horaFin, String enlace){
-        super(fecha, horaPrevista, duracionPrevista, horaInicio, horaFin);
+    public ReunionVirtual(Date fecha, Instant horaPrevista, Duration duracionPrevista, String enlace){
+        super(fecha, horaPrevista, duracionPrevista);
         this.enlace = enlace;
     }
 

@@ -8,16 +8,16 @@ public class ReunionPresencial extends Reunion {
 
     @Override
     public void iniciar() {
-
+        this.horaInicio=Instant.now();
     }
 
     @Override
     public void finalizar() {
-
+        this.horaFin=Instant.now();
     }
 
-    public ReunionPresencial(Date fecha, Instant horaPrevista, Duration duracionPrevista, Instant horaInicio, Instant horaFin, String sala){
-        super(fecha, horaPrevista, duracionPrevista, horaInicio, horaFin);
+    public ReunionPresencial(Date fecha, Instant horaPrevista, Duration duracionPrevista, String sala){
+        super(fecha, horaPrevista, duracionPrevista);
         this.sala = sala;
     }
 
