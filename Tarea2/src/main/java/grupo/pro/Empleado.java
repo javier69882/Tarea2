@@ -5,13 +5,20 @@ public class Empleado {
     private String apellidos;
     private String nombre;
     private String correo;
+    private Departamento departamento;
 
-    public Empleado(String id, String apellidos, String nombre, String correo) {
+    public Empleado(String id, String apellidos, String nombre, String correo,Departamento departamento) {
         this.id = id;
         this.apellidos = apellidos;
         this.nombre = nombre;
         this.correo = correo;
+        this.departamento = departamento;
+
+        departamento.agregarEmpleado(this); //añado altiro al empleado
     }
+
+
+
     public String getId(){
         return id;
     }
@@ -36,7 +43,10 @@ public class Empleado {
     public void setCorreo(String correo){
         this.correo=correo;
     }
+    public Departamento getDepartamento(){
+        return departamento;
+    }
     public String toString(){
-        return "Empleado: " + nombre + " " + apellidos + ", ID: " + id + ", Correo: " + correo;
+        return "Empleado: " + nombre + " " + apellidos + ", ID: " + id + ", Correo: " + correo + ", Departamento: " + getDepartamento();
     }
 }

@@ -20,6 +20,13 @@ public class ReunionPresencial extends Reunion {
         super(fecha, horaPrevista, duracionPrevista, horaInicio, horaFin);
         this.sala = sala;
     }
+
+
+
+
+
+
+
     public String getSala(){
         return sala;
     }

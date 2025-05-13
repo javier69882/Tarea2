@@ -46,6 +46,13 @@ public abstract class Reunion {
     public float calcularTiempoReal() {
         return 0;
     }
+
+
+
+
+
+
+
     public java.util.Date getFecha(){
         return fecha;
     }

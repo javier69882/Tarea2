@@ -12,6 +12,10 @@ public class Invitacion implements Invitable {
     public void invitar() {
 
     }
+
+
+
+
     public Instant getHora(){
         return hora;
     }

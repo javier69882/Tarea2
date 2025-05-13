@@ -7,6 +7,10 @@ public class Nota{
         this.contenido = contenido;
     }
 
+
+
+
+
     public String getContenido(){
         return contenido;
     }

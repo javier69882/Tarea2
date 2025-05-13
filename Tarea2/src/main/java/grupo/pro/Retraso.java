@@ -2,13 +2,17 @@ package grupo.pro;
 
 import java.time.Instant;
 
-public class Retraso {
+public class Retraso extends Asistencia{
 
     private Instant hora;
 
     public Retraso(Instant hora) {
         this.hora = hora;
     }
+
+
+
+
     public Instant getHora(){
         return hora;
     }
