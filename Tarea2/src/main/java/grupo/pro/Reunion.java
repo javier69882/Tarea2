@@ -63,13 +63,25 @@ public abstract class Reunion {
 
 
     public List<Retraso> obtenerRetrasos() {
-        return null;
+        List<Retraso> retrasos = new ArrayList<>();
+        for (Asistencia asistencia : presentes) {
+            Instant llegada = asistencia.getHoraLlegada();
+            if (llegada.isAfter(horaPrevista)) {
+                Duration retraso = Duration.between(horaPrevista, llegada);
+                retrasos.add(new Retraso(asistencia.getInvitado(), retraso));
+            }
+        }
+        return retrasos;
     }
 
 
 
     public float calcularTiempoReal() {
-        return 0;
+        if(horaInicio==null||horaFin==null){
+            return 0;
+        }
+        Duration duracionReal=Duration.between(horaInicio, horaFin);
+        return duracionReal.toMinutes();
     }
 
 

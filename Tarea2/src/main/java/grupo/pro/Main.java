@@ -55,6 +55,17 @@ public class Main {
         for (Invitable ausente : reunionPresencial.obtenerAusencias()) {
             System.out.println(ausente);
         }
+        //probar asistencia
+        System.out.println("\nPorcentaje de asistencia: " + reunionPresencial.obtenerPorcentajeAsistencia() + "%");
+
+        //probar retrasos
+        System.out.println("\nRetrasos:");
+        for(Retraso retraso: reunionPresencial.obtenerRetrasos()) {
+            System.out.println(retraso);
+        }
+
+        //duracion real de la reunion
+        System.out.println("\nDuración real de la reunión: " + reunionPresencial.calcularTiempoReal() + " minutos");
 
 
 

@@ -1,25 +1,27 @@
 package grupo.pro;
 
 import java.time.Instant;
+import java.time.Duration;
 
-public class Retraso extends Asistencia{
+public class Retraso{
+    private Invitable invitado;
+    private Duration duracion;
 
-    private Instant hora;
-
-    public Retraso(Instant hora) {
-        this.hora = hora;
+    public Retraso(Invitable invitado, Duration duracion) {
+        this.invitado = invitado;
+        this.duracion = duracion;
     }
 
-
-
-
-    public Instant getHora(){
-        return hora;
+    public Invitable getInvitado() {
+        return invitado;
     }
-    public void setHora(Instant hora){
-        this.hora=hora;
+
+    public Duration getDuracion() {
+        return duracion;
     }
-    public String toString(){
-        return "Retraso: " + hora;
+
+    @Override
+    public String toString() {
+        return invitado.toString() + " se retrasó " + duracion.toMinutes() + " minutos.";
     }
 }
