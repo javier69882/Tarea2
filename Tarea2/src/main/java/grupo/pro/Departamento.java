@@ -46,6 +46,9 @@ public class Departamento implements Invitable{
     public void setEmpleados(List<Empleado> empleados){
         this.empleados=empleados;
     }
+
+
+
     public String toString() {
        return  "Departamento: " + nombre + ", Empleados: " + empleados.size();
 

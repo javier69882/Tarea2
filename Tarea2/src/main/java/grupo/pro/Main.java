@@ -2,6 +2,7 @@ package grupo.pro;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
@@ -76,6 +77,15 @@ public class Main {
         System.out.println("\nNotas de la reunión:");
         for (Nota nota : reunionPresencial.obtenerNotas()) {
             System.out.println(nota);
+        }
+
+
+
+        //Inforeme de la reunion
+        try {
+            Informe.generarInforme(reunionPresencial, "informe_reunion.txt");
+        } catch (IOException e) {
+            System.out.println("Error al generar el informe: " + e.getMessage());
         }
 
 

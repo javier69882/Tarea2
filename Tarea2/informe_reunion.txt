@@ -1,0 +1,25 @@
+------- INFORME DE REUNIÓN -------
+
+Fecha: Thu May 15 17:20:20 GMT-04:00 2025
+Hora prevista: 2025-05-15T21:20:20.826853500Z
+Hora de inicio real: 2025-05-15T21:20:20.905415800Z
+Hora de fin: 2025-05-15T21:20:20.907920600Z
+Duración real (minutos): 0.0
+
+Tipo: Presencial
+Sala: Sala A
+
+Participantes y asistencia:
+Total invitados: 2
+Presentes: 1
+Ausentes: 1
+Porcentaje de asistencia: 50.0%
+
+- Empleado: Juan Pérez, ID: 123, Correo: juan.perez@empresa.com, Departamento: Informática, Asistencia: Tarde (0 min)
+- Empleado: Javier Argomedo, ID: 1234, Correo: javier.argomedo@empresa.com, Departamento: Informática, Asistencia: Ausente
+
+Notas registradas:
+ * Se tuvo una reunion amigable
+ * Se discutieron todos los temas previstos
+
+------- FIN DEL INFORME -------
