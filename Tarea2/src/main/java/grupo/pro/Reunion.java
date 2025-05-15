@@ -15,6 +15,7 @@ public abstract class Reunion {
     private List<Invitable> invitados=new ArrayList<>();
     private List<Asistencia> presentes = new ArrayList<>();
     private List<Invitable> ausentes = new ArrayList<>();
+    private List<Nota> notas=new ArrayList<>();
 
     public Reunion(java.util.Date fecha, Instant horaPrevista, Duration duracionPrevista) {
         this.fecha = fecha;
@@ -84,6 +85,16 @@ public abstract class Reunion {
         return duracionReal.toMinutes();
     }
 
+    public void agregarNota(String contenido) {
+        notas.add(new Nota(contenido));
+    }
+    public void agregarNota(Nota nota) {
+        notas.add(nota);
+    }
+    public List<Nota> obtenerNotas() {
+        return notas;
+    }
+
 
 
 
@@ -131,4 +142,5 @@ public abstract class Reunion {
                 "Hora inicio: " + horaInicio + "\n" +
                 "Hora fin: " + horaFin;
     }
+
 }

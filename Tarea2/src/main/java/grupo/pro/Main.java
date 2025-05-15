@@ -43,6 +43,11 @@ public class Main {
         System.out.println("Reunión iniciada a las: " + reunionPresencial.getHoraInicio());
         reunionPresencial.registrarAsistencia(empleado1);
 
+        reunionPresencial.agregarNota("Se tuvo una reunion amigable");
+        reunionPresencial.agregarNota("Se discutieron todos los temas previstos");
+
+
+
         reunionPresencial.finalizar();
         System.out.println("Reunión finalizada a las: " + reunionPresencial.getHoraFin());
 
@@ -66,6 +71,12 @@ public class Main {
 
         //duracion real de la reunion
         System.out.println("\nDuración real de la reunión: " + reunionPresencial.calcularTiempoReal() + " minutos");
+
+
+        System.out.println("\nNotas de la reunión:");
+        for (Nota nota : reunionPresencial.obtenerNotas()) {
+            System.out.println(nota);
+        }
 
 
 
