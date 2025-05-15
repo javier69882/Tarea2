@@ -22,7 +22,7 @@ public class Asistencia {
     public Instant getHoraLlegada() {
         return horaLlegada;
     }
-    public String toString() {
+    public String toString(){
         return invitado.toString() + " llegó a las " + horaLlegada;
     }
 }

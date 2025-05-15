@@ -47,17 +47,26 @@ public abstract class Reunion {
         return ausentes;
     }
 
+    public int obtenerTotalAsistencia(){
+        return presentes.size();
+    }
+
+    public float obtenerPorcentajeAsistencia(){
+        if(invitados.size()==0){
+            return 0;
+        }
+        else{
+            return (float) presentes.size()/invitados.size()*100;
+        }
+    }
+
+
+
     public List<Retraso> obtenerRetrasos() {
         return null;
     }
 
-    public int obtenerTotalAsistencia() {
-        return 0;
-    }
 
-    public float obtenerPorcentajeAsistencia() {
-        return 0;
-    }
 
     public float calcularTiempoReal() {
         return 0;
