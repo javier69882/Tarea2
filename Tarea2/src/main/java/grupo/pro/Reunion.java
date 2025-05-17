@@ -12,16 +12,19 @@ public abstract class Reunion {
     protected Duration duracionPrevista;
     protected Instant horaInicio;
     protected Instant horaFin;
+    private TipoReunion tipo;
     private List<Invitable> invitados=new ArrayList<>();
     private List<Asistencia> presentes = new ArrayList<>();
     private List<Invitable> ausentes = new ArrayList<>();
     private List<Nota> notas=new ArrayList<>();
 
-    public Reunion(java.util.Date fecha, Instant horaPrevista, Duration duracionPrevista) {
+    public Reunion(java.util.Date fecha, Instant horaPrevista, Duration duracionPrevista, TipoReunion tipo) {
         this.fecha = fecha;
         this.horaPrevista = horaPrevista;
         this.duracionPrevista = duracionPrevista;
+        this.tipo = tipo;
     }
+
     public void agregarInvitado(Invitable invitable) {
         invitados.add(invitable);
         ausentes.add(invitable);
@@ -134,6 +137,14 @@ public abstract class Reunion {
     public List<Invitable> getInvitados(){
         return invitados;
     }
+    public TipoReunion getTipo() {
+        return tipo;
+    }
+    public void setTipo(TipoReunion tipo) {
+        this.tipo = tipo;
+    }
+
+
     public String toString(){
         return "Reunion: " + "\n" +
                 "Fecha: " + fecha + "\n" +

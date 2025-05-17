@@ -16,8 +16,8 @@ public class ReunionPresencial extends Reunion {
         this.horaFin=Instant.now();
     }
 
-    public ReunionPresencial(Date fecha, Instant horaPrevista, Duration duracionPrevista, String sala){
-        super(fecha, horaPrevista, duracionPrevista);
+    public ReunionPresencial(Date fecha, Instant horaPrevista, Duration duracionPrevista, TipoReunion tipo, String sala){
+        super(fecha, horaPrevista, duracionPrevista, tipo);
         this.sala = sala;
     }
 

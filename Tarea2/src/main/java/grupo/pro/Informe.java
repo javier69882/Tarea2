@@ -17,6 +17,7 @@ public class Informe {
         writer.write("Hora de inicio real: " + reunion.getHoraInicio() + "\n");
         writer.write("Hora de fin: " + reunion.getHoraFin() + "\n");
         writer.write("Duración real (minutos): " + reunion.calcularTiempoReal() + "\n\n");
+        writer.write("Tipo de reunión: " + reunion.getTipo() + "\n");
 
         if (reunion instanceof ReunionVirtual) {
             writer.write("Tipo: Virtual\n");

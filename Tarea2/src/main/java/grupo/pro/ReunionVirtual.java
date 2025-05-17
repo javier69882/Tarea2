@@ -15,8 +15,8 @@ public class ReunionVirtual extends Reunion {
     public void finalizar() {
         this.horaFin=Instant.now();
     }
-    public ReunionVirtual(Date fecha, Instant horaPrevista, Duration duracionPrevista, String enlace){
-        super(fecha, horaPrevista, duracionPrevista);
+    public ReunionVirtual(Date fecha, Instant horaPrevista, Duration duracionPrevista, TipoReunion tipo, String sala){
+        super(fecha, horaPrevista, duracionPrevista, tipo);
         this.enlace = enlace;
     }
 

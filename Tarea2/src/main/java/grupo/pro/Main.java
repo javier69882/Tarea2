@@ -11,9 +11,10 @@ public class Main {
         Date fecha = new Date();
         Instant horaPrevista = Instant.now();
         Duration duracionPrevista = Duration.ofHours(2);
+        TipoReunion tipo = TipoReunion.TECNICA;
         String sala = "Sala A";
 
-        ReunionPresencial reunionPresencial = new ReunionPresencial(fecha, horaPrevista, duracionPrevista, sala);
+        ReunionPresencial reunionPresencial = new ReunionPresencial(fecha, horaPrevista, duracionPrevista, tipo,sala);
         System.out.println(reunionPresencial);
 
         //creo departamento
