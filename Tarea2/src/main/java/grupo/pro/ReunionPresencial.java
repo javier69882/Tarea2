@@ -18,6 +18,9 @@ public class ReunionPresencial extends Reunion {
 
     public ReunionPresencial(Date fecha, Instant horaPrevista, Duration duracionPrevista, TipoReunion tipo, String sala){
         super(fecha, horaPrevista, duracionPrevista, tipo);
+        if (sala==null||sala.trim().isEmpty()){
+            throw new ValorNullException("La sala no puede ser nula ni vacía.");
+        }
         this.sala = sala;
     }
 
@@ -31,6 +34,9 @@ public class ReunionPresencial extends Reunion {
         return sala;
     }
     public void setSala(String sala){
+        if (sala==null||sala.trim().isEmpty()){
+            throw new ValorNullException("La sala no puede ser nula ni vacía.");
+        }
         this.sala=sala;
     }
     public java.util.Date getFecha(){

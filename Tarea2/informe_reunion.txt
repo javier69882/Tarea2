@@ -1,11 +1,12 @@
 ------- INFORME DE REUNIÓN -------
 
-Fecha: Thu May 15 17:20:20 GMT-04:00 2025
-Hora prevista: 2025-05-15T21:20:20.826853500Z
-Hora de inicio real: 2025-05-15T21:20:20.905415800Z
-Hora de fin: 2025-05-15T21:20:20.907920600Z
+Fecha: Fri May 16 22:21:43 GMT-04:00 2025
+Hora prevista: 2025-05-17T02:21:43.513348200Z
+Hora de inicio real: 2025-05-17T02:21:43.552930700Z
+Hora de fin: 2025-05-17T02:21:43.554930700Z
 Duración real (minutos): 0.0
 
+Tipo de reunión: TECNICA
 Tipo: Presencial
 Sala: Sala A
 

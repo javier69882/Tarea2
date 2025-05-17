@@ -18,14 +18,29 @@ public abstract class Reunion {
     private List<Invitable> ausentes = new ArrayList<>();
     private List<Nota> notas=new ArrayList<>();
 
-    public Reunion(java.util.Date fecha, Instant horaPrevista, Duration duracionPrevista, TipoReunion tipo) {
+    public Reunion(java.util.Date fecha, Instant horaPrevista, Duration duracionPrevista, TipoReunion tipo){
+        if(fecha==null){
+            throw new ValorNullException("La fecha no puede ser nula");
+        }
+        if(horaPrevista==null){
+            throw new ValorNullException("La hora prevista no puede ser nula");
+        }
+        if(duracionPrevista==null || duracionPrevista.isNegative() || duracionPrevista.isZero()){
+            throw new ValorNullException("La duración prevista debe ser mayor a cero");
+        }
+        if(tipo==null){
+            throw new ValorNullException("El tipo de reunión no puede ser nulo");
+        }
         this.fecha = fecha;
         this.horaPrevista = horaPrevista;
         this.duracionPrevista = duracionPrevista;
         this.tipo = tipo;
     }
 
-    public void agregarInvitado(Invitable invitable) {
+    public void agregarInvitado(Invitable invitable){
+        if(invitable==null){
+            throw new ValorNullException("No se puede agregar un invitado nulo");
+        }
         invitados.add(invitable);
         ausentes.add(invitable);
     }
@@ -33,7 +48,10 @@ public abstract class Reunion {
     public abstract void iniciar();
     public abstract void finalizar();
 
-    public void registrarAsistencia(Invitable invitable) {
+    public void registrarAsistencia(Invitable invitable){
+        if(invitable == null){
+            throw new ValorNullException("No se puede registrar asistencia de un invitado nulo");
+        }
         if (ausentes.contains(invitable)) {
             presentes.add(new Asistencia(invitable, Instant.now()));
             ausentes.remove(invitable);
@@ -88,10 +106,16 @@ public abstract class Reunion {
         return duracionReal.toMinutes();
     }
 
-    public void agregarNota(String contenido) {
+    public void agregarNota(String contenido){
+        if(contenido==null || contenido.trim().isEmpty()){
+            throw new ValorNullException("La nota no puede estar vacía");
+        }
         notas.add(new Nota(contenido));
     }
-    public void agregarNota(Nota nota) {
+    public void agregarNota(Nota nota){
+        if(nota==null){
+            throw new ValorNullException("No se puede agregar una nota nula");
+        }
         notas.add(nota);
     }
     public List<Nota> obtenerNotas() {
@@ -120,12 +144,21 @@ public abstract class Reunion {
         return horaFin;
     }
     public void setFecha(java.util.Date fecha){
+        if(fecha==null){
+            throw new ValorNullException("La fecha no puede ser nula");
+        }
         this.fecha=fecha;
     }
     public void setHoraPrevista(Instant horaPrevista){
+        if(horaPrevista==null){
+            throw new ValorNullException("La hora prevista no puede ser nula");
+        }
         this.horaPrevista=horaPrevista;
     }
     public void setDuracionPrevista(Duration duracionPrevista){
+        if(duracionPrevista==null || duracionPrevista.isNegative() || duracionPrevista.isZero()){
+            throw new ValorNullException("La duración prevista debe ser mayor a cero");
+        }
         this.duracionPrevista=duracionPrevista;
     }
     public void setHoraInicio(Instant horaInicio){
@@ -140,7 +173,16 @@ public abstract class Reunion {
     public TipoReunion getTipo() {
         return tipo;
     }
-    public void setTipo(TipoReunion tipo) {
+    public void setTipo(TipoReunion tipo){
+        if(tipo==null){
+            throw new ValorNullException("El tipo no puede ser nulo");
+        }
+        try{
+            TipoReunion.valueOf(tipo.name());
+        }
+        catch(IllegalArgumentException e){
+            throw new TipoReunionNoPermitidoException("Tipo de reunión no permitido: " + tipo);
+        }
         this.tipo = tipo;
     }
 

@@ -3,7 +3,7 @@ import java.util.Date;
 import java.time.Instant;
 import java.time.Duration;
 
-public class ReunionVirtual extends Reunion {
+public class ReunionVirtual extends Reunion{
     private String enlace;
 
     @Override
@@ -15,11 +15,13 @@ public class ReunionVirtual extends Reunion {
     public void finalizar() {
         this.horaFin=Instant.now();
     }
-    public ReunionVirtual(Date fecha, Instant horaPrevista, Duration duracionPrevista, TipoReunion tipo, String sala){
+    public ReunionVirtual(Date fecha, Instant horaPrevista, Duration duracionPrevista, TipoReunion tipo, String enlace){
         super(fecha, horaPrevista, duracionPrevista, tipo);
-        this.enlace = enlace;
+        if(enlace==null||enlace.trim().isEmpty()){
+            throw new ValorNullException("El enlace no puede ser nulo ni vacío");
+        }
+        this.enlace=enlace;
     }
-
 
 
 
@@ -33,6 +35,9 @@ public class ReunionVirtual extends Reunion {
         return enlace;
     }
     public void setEnlace(String enlace){
+        if(enlace==null||enlace.trim().isEmpty()){
+            throw new ValorNullException("El enlace no puede ser nulo ni vacío");
+        }
         this.enlace=enlace;
     }
     public java.util.Date getFecha(){
