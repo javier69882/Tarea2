@@ -6,8 +6,18 @@ import java.io.IOException;
 import java.time.Duration;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-
+/**
+ * Clase para generar informes detallados de reuniones.
+ */
 public class Informe {
+
+    /**
+     * Genera un informe detallado de una reunión y lo guarda en un archivo.
+     *
+     * @param reunion       La reunión de la cual se generará el informe.
+     * @param nombreArchivo El nombre del archivo donde se guardará el informe.
+     * @throws IOException Si ocurre un error al escribir en el archivo.
+     */
     public static void generarInforme(Reunion reunion, String nombreArchivo) throws IOException{
         BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo));
 
