@@ -1,9 +1,9 @@
 ------- INFORME DE REUNIÓN -------
 
-Fecha: Mon May 19 13:35:42 GMT-04:00 2025
-Hora prevista: 2025-05-19T17:35:42.247017200Z
-Hora de inicio real: 2025-05-19T17:35:42.446017500Z
-Hora de fin: 2025-05-19T17:35:42.449018300Z
+Fecha: Wed May 21 23:58:33 GMT-04:00 2025
+Hora prevista: 2025-05-22T03:58:33.346694600Z
+Hora de inicio real: 2025-05-22T03:58:33.433687700Z
+Hora de fin: 2025-05-22T03:58:33.436689300Z
 Duración real (minutos): 0.0
 
 Tipo de reunión: TECNICA
@@ -11,13 +11,14 @@ Tipo: Presencial
 Sala: Sala A
 
 Participantes y asistencia:
-Total invitados: 2
-Presentes: 1
+Total invitados: 3
+Presentes: 2
 Ausentes: 1
-Porcentaje de asistencia: 50.0%
+Porcentaje de asistencia: 66.66667%
 
 - Empleado: Juan Pérez, ID: 123, Correo: juan.perez@empresa.com, Departamento: Informática, Asistencia: Tarde (0 min)
 - Empleado: Javier Argomedo, ID: 1234, Correo: javier.argomedo@empresa.com, Departamento: Informática, Asistencia: Ausente
+- Externo: Vicente Garcia, Correo: vicho173@gmail.com, Asistencia: Tarde (0 min)
 
 Notas registradas:
  * Se tuvo una reunion amigable

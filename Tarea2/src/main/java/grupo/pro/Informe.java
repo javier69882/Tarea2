@@ -18,7 +18,7 @@ public class Informe {
      * @param nombreArchivo El nombre del archivo donde se guardará el informe.
      * @throws IOException Si ocurre un error al escribir en el archivo.
      */
-    public static void generarInforme(Reunion reunion, String nombreArchivo) throws IOException{
+    public static void generarInforme(Reunion reunion, String nombreArchivo) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo));
 
         writer.write("------- INFORME DE REUNIÓN -------\n\n");
@@ -58,10 +58,12 @@ public class Informe {
                     }
                 }
             }
-            if (inv instanceof Empleado) {
-                Empleado emp = (Empleado) inv;
+            if (inv instanceof Empleado emp) {
                 writer.write("- Empleado: " + emp.getNombre() + " " + emp.getApellidos() + ", ID: " + emp.getId() + ", Correo: " + emp.getCorreo()
                         + ", Departamento: " + emp.getDepartamento().getNombre() + ", Asistencia: " + estado + "\n");
+            } else if (inv instanceof Externo externo) {
+                writer.write("- Externo: " + externo.getNombre() + " " + externo.getApellidos() + ", Correo: " + externo.getCorreo()
+                        + ", Asistencia: " + estado + "\n");
             } else {
                 writer.write("- Invitado: " + inv.toString() + " * Asistencia: " + estado + "\n");
             }

@@ -28,6 +28,8 @@ public class Main {
         Empleado empleado2 = new Empleado("1234", "Argomedo", "Javier", "javier.argomedo@empresa.com", Informatica);
         System.out.println(empleado2);
 
+        Externo externo1 = new Externo("Vicente", "Garcia","vicho173@gmail.com");
+
         // to string de departamento
         System.out.println(Informatica);
 
@@ -35,6 +37,7 @@ public class Main {
         //AGREGA INVITADOS
         reunionPresencial.agregarInvitado(empleado1);
         reunionPresencial.agregarInvitado(empleado2);
+        reunionPresencial.agregarInvitado(externo1);
 
         // Invitar a todos los invitados
         for(Invitable invitado : reunionPresencial.getInvitados()){
@@ -44,6 +47,7 @@ public class Main {
         reunionPresencial.iniciar();
         System.out.println("Reunión iniciada a las: " + reunionPresencial.getHoraInicio());
         reunionPresencial.registrarAsistencia(empleado1);
+        reunionPresencial.registrarAsistencia(externo1);
 
         reunionPresencial.agregarNota("Se tuvo una reunion amigable");
         reunionPresencial.agregarNota("Se discutieron todos los temas previstos");
