@@ -67,8 +67,8 @@ public class Asistencia {
      *
      * @return Una cadena que describe al invitado y su hora de llegada.
      */
-
-    public String toString() {
+    @Override
+    public String toString(){
         return getInvitado().toString() + " llegó a las " + getHoraLlegada();
     }
 }
